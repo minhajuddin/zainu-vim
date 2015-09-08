@@ -25,6 +25,6 @@ nnoremap <C-i> :call ToggleZainabZoom()<cr>
 " You can symlink scratch into Dropbox so that it is
 " synced across multiple machines which you use
 function! OpenScratch()
-  exec 'sp '. $HOME . '.scratch'. split(getcwd(), '/')[-1]
+  exec 'sp '. $HOME . '/.scratch/'. split(getcwd(), '/')[-1]
 endfunction
 nnoremap <C-x> :call OpenScratch()<cr>

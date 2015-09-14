@@ -37,3 +37,7 @@ function! OpenQuickTodo()
   exec 'sp '. $HOME . '/quick.todo'
 endfunction
 nnoremap <leader>xt :call OpenQuickTodo()<cr>
+
+" -------------Ctags-------------
+" run ctags
+nnoremap <leader>xc :execute '!ctags -R > /dev/null \| echo creating-tags-file'<cr>

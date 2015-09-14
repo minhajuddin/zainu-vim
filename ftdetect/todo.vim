@@ -1,1 +1,1 @@
-au BufNewFile,BufRead *.todo                      call s:setf('todo')
+au BufNewFile,BufRead *.todo setfiletype 'todo'

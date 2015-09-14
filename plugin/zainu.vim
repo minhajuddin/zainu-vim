@@ -18,7 +18,7 @@ function! ToggleZainabZoom()
   call winrestview(l:winview)
 endfunction
 
-nnoremap <C-i> :call ToggleZainabZoom()<cr>
+nnoremap <leader>xi :call ToggleZainabZoom()<cr>
 
 " -------------Scratch-------------
 " Open scratch file from dropbox
@@ -27,4 +27,13 @@ nnoremap <C-i> :call ToggleZainabZoom()<cr>
 function! OpenScratch()
   exec 'sp '. $HOME . '/.scratch/'. split(getcwd(), '/')[-1]
 endfunction
-nnoremap <C-x> :call OpenScratch()<cr>
+nnoremap <leader>xx :call OpenScratch()<cr>
+
+" -------------Quick TODO-------------
+" Open a global quick todo file
+" You can symlink quick.todo into Dropbox so that it is
+" synced across multiple machines which you use
+function! OpenQuickTodo()
+  exec 'sp '. $HOME . '/quick.todo'
+endfunction
+nnoremap <leader>xt :call OpenQuickTodo()<cr>

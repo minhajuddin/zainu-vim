@@ -41,3 +41,21 @@ nnoremap <leader>xt :call OpenQuickTodo()<cr>
 " -------------Ctags-------------
 " run ctags
 nnoremap <leader>xc :execute '!ctags -R &> /dev/null \| echo creating-tags-file'<cr>
+
+" -------------Reformat-------------
+" reformat the file
+function! ReformatCode()
+  " to save the cursor position
+  let l:winview = winsaveview()
+  if &ft == "go"
+    :execute 'Fmt'
+    echo "go fmted!"
+  elseif &ft == "javascript"
+    :call g:Jsbeautify()
+    echo "js beautified!"
+  else
+    :exe 'normal gg=G'
+  endif
+  call winrestview(l:winview)
+endfunction
+nnoremap <leader>xf :call ReformatCode()<cr>

@@ -59,3 +59,7 @@ function! ReformatCode()
   call winrestview(l:winview)
 endfunction
 nnoremap <leader>xf :call ReformatCode()<cr>
+
+" -------------Execute current line as vim-------------
+nnoremap <leader>xv :execute getline(".")<cr>
+

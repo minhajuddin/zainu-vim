@@ -34,7 +34,7 @@ nnoremap <leader>xx :call OpenScratch()<cr>
 " You can symlink quick.todo into Dropbox so that it is
 " synced across multiple machines which you use
 function! OpenQuickTodo()
-  exec 'sp '. $HOME . '/quick.todo'
+  exec 'tabnew '. $HOME . '/quick.todo'
 endfunction
 nnoremap <leader>xt :call OpenQuickTodo()<cr>
 

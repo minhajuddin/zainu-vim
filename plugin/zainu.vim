@@ -63,3 +63,5 @@ nnoremap <leader>xf :call ReformatCode()<cr>
 " -------------Execute current line as vim-------------
 nnoremap <leader>xv :execute getline(".")<cr>
 
+" -- Close current buffer --
+nnoremap <leader>xd :close<cr>

@@ -67,11 +67,15 @@ nnoremap <leader>xv :execute getline(".")<cr>
 nnoremap <leader>xd :close<cr>
 
 " computes the value of the current line
-:nnoremap <leader>xe :!bc<cr>
+nnoremap <leader>xe :!bc<cr>
 
 " computes the value of the current line
-:nnoremap <leader>xw :<cr>
+nnoremap <leader>xw :<cr>
 
 " tab navigation
-:nnoremap <leader>xj :tabp<cr>
-:nnoremap <leader>xk :tabn<cr>
+nnoremap <leader>xj :tabp<cr>
+nnoremap <leader>xk :tabn<cr>
+
+nnoremap <C-b> :CtrlPBuffer<cr>
+
+nnoremap <leader>xn :CtrlPFunky<cr>

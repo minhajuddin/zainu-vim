@@ -51,8 +51,23 @@ function! ReformatCode()
     :execute 'Fmt'
     echo "go fmted!"
   elseif &ft == "javascript"
-    :call g:Jsbeautify()
-    echo "js beautified!"
+    :call JsBeautify()
+    echo "JS beautified!"
+  elseif &ft == "json"
+    :call JsonBeautify()
+    echo "JSON beautified!"
+  elseif &ft == "html"
+    :call HtmlBeautify()
+    echo "HTML beautified!"
+  elseif &ft == "css"
+    :call CSSBeautify()
+    echo "CSS beautified!"
+  elseif &ft == "scss"
+    :call CSSBeautify()
+    echo "CSS beautified!"
+  elseif &ft == "jsx"
+    :call JsxBeautify()
+    echo "Jsx beautified!"
   else
     :exe 'normal gg=G'
   endif

@@ -36,7 +36,7 @@ nnoremap <leader>xx :call OpenScratch()<cr>
 function! OpenQuickTodo()
   exec 'tabnew '. $HOME . '/quick.todo'
 endfunction
-nnoremap <leader>xt :call OpenQuickTodo()<cr>
+nnoremap <leader>xd :call OpenQuickTodo()<cr>
 
 " -------------Ctags-------------
 " run ctags
@@ -79,7 +79,7 @@ nnoremap <leader>xf :call ReformatCode()<cr>
 nnoremap <leader>xv :execute getline(".")<cr>
 
 " -- Close current buffer --
-nnoremap <leader>xd :close<cr>
+"nnoremap <leader>xd :close<cr>
 
 " computes the value of the current line
 nnoremap <leader>xe :!bc<cr>
@@ -94,3 +94,10 @@ nnoremap <leader>xk :tabn<cr>
 nnoremap <C-b> :CtrlPBuffer<cr>
 
 nnoremap <leader>xn :CtrlPFunky<cr>
+
+nnoremap <leader>xp :lcd %:p:h<cr>
+
+" Move to zainu
+let g:no_turbux_mappings = 1
+map <leader>xt <Plug>SendTestToTmux
+map <leader>xT <Plug>SendFocusedTestToTmux

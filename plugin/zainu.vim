@@ -111,3 +111,8 @@ let g:markdown_fenced_languages = ['html', 'vim', 'ruby', 'python', 'bash=sh', '
 
 nnoremap <leader>z <Plug>ZVMotion
 
+function CreateParentDirs()
+  execute ':silent !mkdir -p %:h'
+  write
+endfunction
+command W call CreateParentDirs()

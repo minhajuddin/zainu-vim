@@ -80,6 +80,7 @@ nnoremap <leader>xv :execute getline(".")<cr>
 
 " -- Close current buffer --
 "nnoremap <leader>xd :close<cr>
+nnoremap <C-c> :close<cr>
 
 " computes the value of the current line
 nnoremap <leader>xe :!bc<cr>
@@ -90,6 +91,9 @@ nnoremap <leader>xw :<cr>
 " tab navigation
 nnoremap <leader>xj :tabp<cr>
 nnoremap <leader>xk :tabn<cr>
+nnoremap <C-j> :tabp<cr>
+nnoremap <C-k> :tabn<cr>
+
 
 nnoremap <C-b> :CtrlPBuffer<cr>
 
@@ -101,3 +105,9 @@ nnoremap <leader>xp :lcd %:p:h<cr>
 let g:no_turbux_mappings = 1
 map <leader>xt <Plug>SendTestToTmux
 map <leader>xT <Plug>SendFocusedTestToTmux
+
+" Fenced code blocks
+let g:markdown_fenced_languages = ['html', 'vim', 'ruby', 'python', 'bash=sh', 'go', 'javascript']
+
+nnoremap <leader>z <Plug>ZVMotion
+

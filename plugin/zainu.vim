@@ -50,6 +50,9 @@ function! ReformatCode()
   if &ft == "go"
     :execute 'Fmt'
     echo "go fmted!"
+  elseif &ft == "elixir"
+    :MixFormat
+    echo "elixir formatted"
   elseif &ft == "javascript"
     :call JsBeautify()
     echo "JS beautified!"
@@ -89,8 +92,6 @@ nnoremap <leader>xe :!bc<cr>
 nnoremap <leader>xw :<cr>
 
 " tab navigation
-nnoremap <leader>xj :tabp<cr>
-nnoremap <leader>xk :tabn<cr>
 nnoremap <C-j> :tabp<cr>
 nnoremap <C-k> :tabn<cr>
 
@@ -111,8 +112,8 @@ let g:markdown_fenced_languages = ['html', 'vim', 'ruby', 'python', 'bash=sh', '
 
 nnoremap <leader>z <Plug>ZVMotion
 
-function CreateParentDirs()
-  execute ':silent !mkdir -p %:h'
-  write
-endfunction
-command W call CreateParentDirs()
+"function CreateParentDirs()
+  "execute ':silent !mkdir -p %:h'
+  "write
+"endfunction
+"command W call CreateParentDirs()

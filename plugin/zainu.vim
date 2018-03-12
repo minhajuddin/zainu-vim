@@ -51,8 +51,8 @@ function! ReformatCode()
     :execute 'Fmt'
     echo "go fmted!"
   elseif &ft == "elixir"
+    :w
     :MixFormat
-    echo "elixir formatted"
   elseif &ft == "javascript"
     :call JsBeautify()
     echo "JS beautified!"

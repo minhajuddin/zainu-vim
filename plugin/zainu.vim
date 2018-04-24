@@ -47,10 +47,7 @@ nnoremap <leader>xc :execute '!ctags -R &> /dev/null \| echo creating-tags-file'
 function! ReformatCode()
   " to save the cursor position
   let l:winview = winsaveview()
-  if &ft == "go"
-    :execute 'Fmt'
-    echo "go fmted!"
-  elseif &ft == "elixir"
+  if &ft == "elixir"
     :w
     :MixFormat
   elseif &ft == "javascript"

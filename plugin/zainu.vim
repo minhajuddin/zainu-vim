@@ -105,7 +105,9 @@ map <leader>xt <Plug>SendTestToTmux
 map <leader>xT <Plug>SendFocusedTestToTmux
 
 " Fenced code blocks
-let g:markdown_fenced_languages = ['html', 'vim', 'ruby', 'python', 'bash=sh', 'go', 'javascript']
+let g:markdown_fenced_languages = []
+
+let g:markdown_fenced_languages = ['bash=sh', 'css', 'elixir', 'erb=eruby', 'go', 'html', 'javascript', 'js=javascript', 'json=javascript', 'python', 'ruby', 'sql', 'vim']
 
 nnoremap <leader>z <Plug>ZVMotion
 

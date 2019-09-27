@@ -93,9 +93,9 @@ nnoremap <C-j> :tabp<cr>
 nnoremap <C-k> :tabn<cr>
 
 
-nnoremap <C-b> :CtrlPBuffer<cr>
+"nnoremap <C-b> :CtrlPBuffer<cr>
 
-nnoremap <leader>xn :CtrlPFunky<cr>
+"nnoremap <leader>xn :CtrlPFunky<cr>
 
 nnoremap <leader>xp :lcd %:p:h<cr>
 
